@@ -62,8 +62,7 @@ public abstract class Transport { //Создайте класс Transport
 
     @Override
     public String toString() {
-        return "Transport :" +
-                " марка - " + getBrand() +
+        return  " марка - " + getBrand() +
                 ", модель - " + getModel() +
                 ", год производства - " + getManufacturingYear() +
                 ", страна производства - " + getManufacturingCountry() +

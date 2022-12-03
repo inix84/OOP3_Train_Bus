@@ -242,7 +242,7 @@ public class Car extends Transport {
 
     @Override
     public String toString() {
-        return "Car: " +
+        return "Автомобиль: " +
                 " марка - " + getBrand() +
                 ", модель - " + getModel() +
                 ", объем двигателя - " + getEngineVolume() + " л.с." +
