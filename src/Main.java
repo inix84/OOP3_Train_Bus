@@ -1,6 +1,5 @@
-//import Transport.Bus;
 import Transport.Car;
-//import Transport.Train;
+import Transport.Train;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,87 +56,40 @@ public class Main {
 
         System.out.println();
 
-        //Train martin = new Train(
-           //     "«Ласточка»",
-            //    "B-901",
-           //     2011,
-           //    "Россия",
-            //    null,
-            //    3500,
-            //    0,
-            //    "Белорусский вокзал",
-            //    "Минск-Пассажирский",
-            //    11,
-            //    301,
-             //   null
-       /// );
-        //Train leningrad = new Train(
-            //    "«Ленинград»",
-            //    "D-125",
-            //    2019,
-            //    "Россия",
-            //    null,
-            //    1700,
-            //    0,
-            //    "Ленинградский вокзал",
-            //    "Ленинград-Пассажирский",
-            //    8,
-            //    270,
-             //   null
-//        );
+        Train martin = new Train(
+                "«Ласточка»",
+                "B-901",
+              2011,
+              "Россия",
+                null,
+                3500,
+                0,
+                "Белорусский вокзал",
+                "Минск-Пассажирский",
+                11,
+                301,
+                null
+        );
+        Train leningrad = new Train(
+                "«Ленинград»",
+                "D-125",
+                2019,
+                "Россия",
+                null,
+                1700,
+                0,
+                "Ленинградский вокзал",
+                "Ленинград-Пассажирский",
+                8,
+                270,
+                null
+        );
 
-//        System.out.println(martin);
- //       System.out.println(leningrad);
-
-        System.out.println();
-
-//        Bus luaz = new Bus(
-//                "ЛуАЗ",
-//                "5292",
-//                2018,
-//                "Россия",
-//                "белый",
- //               80,
- //               null
- //       ); Bus paz = new Bus(
- //               "ПАЗ",
-  //              "3204",
-  //              2018,
-  //              "Россия",
- //               null,
- //              95,
-//               null
-//       ); Bus scania = new Bus(
-//               "Scania",
-//               "Omni",
-//              2012,
-//              "Швеция",
-//                "синий",
-//                102,
-//               null
-//       );
-//        System.out.println(luaz);
-//        System.out.println(paz);
-//        System.out.println(scania);
+        System.out.println(martin);
+        System.out.println(leningrad);
 
         System.out.println();
 
-//        lada.refill();
-//        audi.refill();
-        //       bMW.refill();
-//        kia.refill();
-//        hyundai.refill();
-
-        System.out.println();
-
-//        martin.refill();
-//        leningrad.refill();
-
-        System.out.println();
-
-//        luaz.refill();
-//        paz.refill();
-//        scania.refill();
-
+            //
     }
 }
