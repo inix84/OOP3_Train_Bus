@@ -1,5 +1,4 @@
 package Transport;
-
 public abstract class Transport { //Создайте класс Transport
     private final String brand; //«Марка»,
     private final String model; // «Модель»,
@@ -64,11 +63,11 @@ public abstract class Transport { //Создайте класс Transport
     @Override
     public String toString() {
         return "Transport :" +
-                " марка - " + brand +
-                ", модель - " + model +
-                ", год производства - " + manufacturingYear +
-                ", страна производства - " + manufacturingCountry +
-                ", цвет - " + color +
-                ", максимальная скорость - " + maximalSpeed;
+                " марка - " + getBrand() +
+                ", модель - " + getModel() +
+                ", год производства - " + getManufacturingYear() +
+                ", страна производства - " + getManufacturingCountry() +
+                ", цвет - " + getColor() +
+                ", максимальная скорость - " + getMaximalSpeed();
     }
 }

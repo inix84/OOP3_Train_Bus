@@ -66,7 +66,7 @@ public class Train extends Transport{ //Создайте класс «Поезд
     @Override
     public String toString() {
         return "Поезд: " +
-                "Поезд = " + super.toString() +
+                super.toString() +
                 ", Цена поездки - " + getTripPrice() + " рублей " +
                 ", время поездки - " + getTravelTime() +
                 ", станция отбытия - " + getDepartureStationName() +

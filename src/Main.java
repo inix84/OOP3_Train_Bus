@@ -1,6 +1,6 @@
 import Transport.Car;
 import Transport.Train;
-
+import Transport.Bus;
 public class Main {
     public static void main(String[] args) {
         Car lada = new Car(
@@ -53,9 +53,7 @@ public class Main {
         System.out.println(bMW);
         System.out.println(kia);
         System.out.println(hyundai);
-
         System.out.println();
-
         Train martin = new Train(
                 "«Ласточка»",
                 "B-901",
@@ -84,12 +82,38 @@ public class Main {
                 270,
                 null
         );
-
         System.out.println(martin);
         System.out.println(leningrad);
-
         System.out.println();
-
-            //
+       Bus luaz = new Bus(
+               "ЛуАЗ",
+               "5292",
+               2018,
+                "Россия",
+               "белый",
+                      80,
+                      null
+              );
+       Bus paz = new Bus(
+                      "ПАЗ",
+                      "3204",
+                      2018,
+                   "Россия",
+                       null,
+                      95,
+              null
+      );
+       Bus scania = new Bus(
+              "Scania",
+              "Omni",
+             2012,
+             "Швеция",
+               "синий",
+               102,
+              null
+      );
+      System.out.println(luaz);
+       System.out.println(paz);
+       System.out.println(scania);
     }
 }
