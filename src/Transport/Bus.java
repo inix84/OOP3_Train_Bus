@@ -1,6 +1,5 @@
 package Transport;
 public class Bus extends Transport{
-
     public Bus(
             String brand,
             String model,
@@ -12,12 +11,10 @@ public class Bus extends Transport{
     ) {
         super(brand, model, manufacturingYear, manufacturingCountry, color, maximalSpeed, fuelType);
     }
-
     @Override
     public void refill() {
         System.out.println("Refilling bus with " + this.fuelType);
     }
-
     @Override
     protected String checkFuelTypeOrDefault(String fuelType) {
         if (fuelType == null || "Gasoline Diesel Electricity".contains(fuelType)) {
@@ -26,8 +23,6 @@ public class Bus extends Transport{
             return fuelType;
         }
     }
-
-
     @Override
     public String toString() {
         return "Автобус: " +
@@ -37,6 +32,5 @@ public class Bus extends Transport{
                 ", страна производства - " + getManufacturingCountry() +
                 ", цвет кузова - " + getColor()  +
                 ", максимальная скорость - " + getMaximalSpeed();
-
     }
 }

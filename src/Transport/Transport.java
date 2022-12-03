@@ -7,7 +7,6 @@ public abstract class Transport { //Создайте класс Transport
     private String color; //«Цвет кузова»,
     private int maximalSpeed; //«Максимальная скорость передвижения».
     protected final String fuelType;
-
     public Transport(String brand,
                      String model,
                      int manufacturingYear,
@@ -24,23 +23,18 @@ public abstract class Transport { //Создайте класс Transport
         setColor(color);
         setMaximalSpeed(maximalSpeed);
     }
-
     public String getBrand() {
         return brand;
     }
-
     public String getModel() {
         return model;
     }
-
     public int getManufacturingYear() {
         return manufacturingYear;
     }
-
     public String getManufacturingCountry() {
         return manufacturingCountry;
     }
-
     public String getColor() {
         return color;
     }
@@ -50,16 +44,11 @@ public abstract class Transport { //Создайте класс Transport
     public void setColor(String color) {
         this.color = ValidationUtils.validOrDefault(color, "Белый");
             }
-
     public void setMaximalSpeed(int maximalSpeed) {
         this.maximalSpeed = Math.max(maximalSpeed, 1);
             }
-
     public abstract void refill();
-
     protected abstract String checkFuelTypeOrDefault(String fuelType);
-
-
     @Override
     public String toString() {
         return  " марка - " + getBrand() +

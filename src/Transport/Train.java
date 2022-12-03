@@ -1,12 +1,10 @@
 package Transport;
-
 public class Train extends Transport{ //Создайте класс «Поезд» (Train), который будет расширять класс Transport.
     private double tripPrice; // «Цена поездки»,
     private int travelTime; // «Время поездки»,
     private String departureStationName; // «Название станции отбытия»,
     private String endingStation; // «Конечная остановка»,
     private int numberOfWagons; // «Количество вагонов».
-
     public Train(String brand,
                  String model,
                  int manufacturingYear,
@@ -20,7 +18,6 @@ public class Train extends Transport{ //Создайте класс «Поезд
                  int maximalSpeed,
                  String fuelType
     ) {
-
         super(brand, model, manufacturingYear, manufacturingCountry, color, maximalSpeed, fuelType);
         setTripPrice(tripPrice);
         setTravelTime(travelTime);
@@ -28,23 +25,18 @@ public class Train extends Transport{ //Создайте класс «Поезд
         setEndingStation(endingStation);
         setNumberOfWagons(numberOfWagons);
     }
-
     public double getTripPrice() {
         return tripPrice;
     }
-
     public void setTripPrice(double tripPrice) {
         this.tripPrice = Math.max(tripPrice, 1);
     }
-
     public int getTravelTime() {
         return travelTime;
     }
-
     public void setTravelTime(int travelTime) {
         this.travelTime = Math.max(travelTime, 1);
     }
-
     public String getDepartureStationName() {
         return departureStationName;
     }
@@ -78,7 +70,6 @@ public class Train extends Transport{ //Создайте класс «Поезд
         System.out.println("Refilling train with " + this.fuelType);
 
     }
-
     @Override
     protected String checkFuelTypeOrDefault(String fuelType) {
         if (fuelType == null || "Diesel".contains(fuelType)) {

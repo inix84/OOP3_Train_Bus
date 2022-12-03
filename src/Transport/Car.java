@@ -10,7 +10,6 @@ public class Car extends Transport {
     private boolean winterTires; // летняя резина
     private  Key key;
     private  Insurance insurance;
-
     public Car(
             String brand,
             String model,
@@ -30,7 +29,6 @@ public class Car extends Transport {
 
         super(brand, model, manufacturingYear, manufacturingCountry, color, maximalSpeed,fuelType
         );
-
         this.bodyType = ValidationUtils.validOrDefault(bodyType, "седан");
         this.placesCount = Math.max(placesCount, 1);
         setEngineVolume(engineVolume);
@@ -40,7 +38,6 @@ public class Car extends Transport {
         this.key = Objects.requireNonNullElseGet(key, Key::new);
         this.insurance = Objects.requireNonNullElseGet(insurance, Insurance::new);
     }
-
     public Car(String brand,
                String model,
                float engineVolume,
@@ -66,7 +63,6 @@ public class Car extends Transport {
                 new Insurance()
         );
     }
-
     @Override
     protected String checkFuelTypeOrDefault(String fuelType) {
         if (fuelType == null || "Gasoline Diesel Electricity".contains(fuelType)) {
@@ -75,12 +71,10 @@ public class Car extends Transport {
             return fuelType;
         }
    }
-
     public void setSeasonTires() {
         int currentMonth = LocalDate.now().getMonthValue();
         this.winterTires = currentMonth <= 4 || currentMonth >= 11;
     }
-
     public boolean itRegNumberValid() { // проверка корректности номера
         if (this.regNumber.length() != 9) {
             return false;
@@ -96,40 +90,31 @@ public class Car extends Transport {
                 && isNumber(regNumberChars[7])
                 && isNumber(regNumberChars[8]);
     }
-
     private boolean isNumber(char symbol) { // проверка корректности номера
         return symbol >= '0' && symbol <= '9';
     }
-
     private boolean isNumberLetter(char symbol) {
         String allowedSymbol = "АВЕКМНОРСТУХ";
         return allowedSymbol.contains("" + symbol);
     }
-
     public float getEngineVolume() {
         return engineVolume;
     }
-
     public void setEngineVolume(float engineVolume) {
         this.engineVolume = engineVolume > 0.0f ? engineVolume : 1.5f;
     }
-
     public String getGearBox() {
         return gearBox;
     }
-
     public void setGearBox(String gearBox) {
         this.gearBox = ValidationUtils.validOrDefault(gearBox, "МКПП");
             }
-
     public String getBodyType() {
         return bodyType;
     }
-
     public String getRegNumber() {
         return regNumber;
     }
-
     public void setRegNumber(String regNumber) {
         this.regNumber = ValidationUtils.validOrDefault(regNumber, "х000х000");
         if (regNumber!=null && regNumber.length()!=0) {
@@ -138,45 +123,35 @@ public class Car extends Transport {
             this.regNumber="х000х000";
         }
     }
-
     public int getPlacesCount() {
         return placesCount;
     }
-
     public boolean isWinterTires() {
         return winterTires;
     }
-
     public void setWinterTires(boolean winterTires) {
         this.winterTires = winterTires;
     }
-
     public Key getKey() {
         return key;
     }
-
     public void setKey(Key key) {
         this.key = key;
     }
-
     public Insurance getInsurance() {
         return insurance;
     }
-
     public void setInsurance(Insurance insurance) {
         this.insurance = insurance;
     }
-
     @Override
     public void refill() {
         System.out.println("Refilling car with " + this.fuelType
         );
     }
-
     public static class Key {
         private final boolean remoteRunEngine;
         private final boolean withoutKeyAccess;
-
         public Key(boolean remoteRunEngine, boolean withoutKeyAccess) {
             this.remoteRunEngine = remoteRunEngine;
             this.withoutKeyAccess = withoutKeyAccess;
@@ -184,16 +159,13 @@ public class Car extends Transport {
         public Key() { // дефолтный конструктор
             this (false,false);
         }
-
         public boolean isRemoteRunEngine() {
             return remoteRunEngine;
         }
-
         public boolean isWithoutKeyAccess() {
             return withoutKeyAccess;
         }
     }
-
     public static class Insurance {
         private final LocalDate expireDate;
         private final double cost;
@@ -212,23 +184,18 @@ public class Car extends Transport {
                 this.number = number;
             }
         }
-
         public Insurance() { // дефолтный конструктор
             this(null,10_000,null);
         }
-
         public LocalDate getExpireDate() {
             return expireDate;
         }
-
         public double getCost() {
             return cost;
         }
-
         public String getNumber() {
             return number;
         }
-
         public void checkExpireDate() {
             if (expireDate.isBefore(LocalDate.now()) || expireDate.isEqual(LocalDate.now()));
             System.out.println("Нужно ехать оформлять новую страховку!");
@@ -239,7 +206,6 @@ public class Car extends Transport {
             }
         }
     }
-
     @Override
     public String toString() {
         return "Автомобиль: " +
